@@ -1,4 +1,4 @@
-# Bot-Ecillo Chatbot Sencillo en PHP y MySQL
+# Bot-Ecillo, un Chatbot Sencillo creado con PHP y MySQL
 
 ![bot-ecillo](https://user-images.githubusercontent.com/6242827/209705267-2a42e865-3b5f-4590-afc6-1776d5e63a12.png)
 
