@@ -1,6 +1,8 @@
 # Bot-Ecillo Chatbot Sencillo en PHP y MySQL
 
-Este Sistema de Chatbot llamado Bot-Ecillo está escrito en PHP, Javascript y MySQL y puede interactuar fácilmente con un usuario final.
+![bot-ecillo](https://user-images.githubusercontent.com/6242827/209705267-2a42e865-3b5f-4590-afc6-1776d5e63a12.png)
+
+Este sencillo sistema de Chatbot llamado Bot-Ecillo está escrito en PHP, Javascript y MySQL y puede interactuar fácilmente con un usuario final.
 
 Además cuenta con un sistema de login para administrar las respuestas del bot
 
