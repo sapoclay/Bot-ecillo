@@ -9,6 +9,7 @@ Además cuenta con un sistema de login para administrar las respuestas del bot
 Para acceder a la administración se pueden utilizar los siguientes datos:
 
 usuario: entreunosyceros
+
 password: prueba
 
 Se puede ver un ejemplo de este proyecto funcionando en la siguiente URL: https://ejemplos.entreunosyceros.net/Bot-ecillo/index.php.
