@@ -12,3 +12,4 @@ if (mysqli_connect_errno()) {
         echo "Fallo al conectar con MySQL: " . mysqli_connect_error();
         exit();
 }
+ 
