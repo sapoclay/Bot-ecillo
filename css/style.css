@@ -1,1 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
 
+a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+::selection {
+  color: #fff;
+  background: #be00e4;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.wrapper {
+  width: 370px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-top: 0px;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+}
+.wrapper .title {
+  background: #8c00ff;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px solid #6900be;
+  border-radius: 5px 5px 0 0;
+}
+.wrapper .form {
+  padding: 20px 15px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.wrapper .form .inbox {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+.wrapper .form .user-inbox {
+  justify-content: flex-end;
+  margin: 13px 0;
+}
+.wrapper .form .inbox .icon {
+  height: 40px;
+  width: 40px;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  border: 1px solid #000;
+}
+.msg-header{
+  margin-right: 10px;
+}
+.wrapper .form .inbox .msg-header {
+  max-width: 53%;
+  margin-left: 10px;
+}
+.form .inbox .msg-header p {
+  color: #fff;
+  background: #851cfd;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+.form .user-inbox .msg-header p {
+  color: #333;
+  background: #efefef;
+}
+.wrapper .typing-field {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #c9c9c9;
+  border-top: 1px solid #d9d9d9;
+  border-radius: 0 0 5px 5px;
+}
+.wrapper .typing-field .input-data {
+  height: 40px;
+  width: 335px;
+  position: relative;
+}
+.wrapper .typing-field .input-data input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 0 80px 0 15px;
+  border-radius: 3px;
+  font-size: 15px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.typing-field .input-data input:focus {
+  border-color: rgba(0, 123, 255, 0.8);
+}
+.input-data input::placeholder {
+  color: #999999;
+  transition: all 0.3s ease;
+}
+.input-data input:focus::placeholder {
+  color: #bfbfbf;
+}
+.wrapper .typing-field .input-data button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  height: 30px;
+  width: 65px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  background: #8400c2;
+  border: 1px solid #7d0088;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.wrapper .typing-field .input-data input:valid ~ button {
+  opacity: 1;
+  pointer-events: auto;
+}
+.typing-field .input-data button:hover {
+  background: #7a00cc;
+}
+
+/*Fomulario búsqueda*/
+
+.entrada {
+  margin: 8px 0 8px 0;
+  padding: 6px;
+  font-size: 1em;
+  border: 5px solid #3892dd;
+  width: 260px;
+}
+.select {
+  margin: 6px 0 12px 0;
+  padding: 6px;
+  font-size: 1em;
+  border: 2px solid #3892dd;
+  width: 260px;
+}
+.botb {
+  margin: 8px 0 8px 0;
+  padding: 9px;
+  font-size: 1em;
+  background-color: #3892dd;
+  border: 0;
+  color: #fff;
+}
+
+#show,
+#hide {
+  color: rgb(73, 73, 73);
+}
+
+#opciones{
+    display: none;
+    color:rgb(151, 151, 151);
+}
+.formulario{
+    text-align: center;
+}
+
+.volver{
+    color: #000 !important;
+}
+
+/*Login*/
+
+.login {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+
+#imgLogin{
+    width: 150px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+#contLogin{
+    max-width: 100%;
+    text-align: center;
+}
+
+.login h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+
+body.loggedin {
+	background-color: #f3f4f7;
+}
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.content > p table td, .content > div table td {
+	padding: 5px;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+
+/*Copyright*/
+.copyR{
+    color: #000;
+    text-align: center;
+}
+
+.loggedin{
+    display: contents !important;
+}
+
+/*Img chat*/
+
+.direct-chat-img {
+  border-radius: 50%;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .login{
+    max-width: 100%;
+    width: 85%;
+    max-height: 100%;
+    height: 50%;
+  }
+
+  .navtop{
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+.login form input[type="password"], .login form input[type="text"]{
+    width: 245px;
+  }
+
+  .login form label{
+    display: none;
+  }
+
+  .content{
+    width: 500px;
+  }
+
+  .form > form:nth-child(1) > p:nth-child(1) > select:nth-child(1){
+    width: 70%;
+  }
+
+  .form > form:nth-child(1) > p:nth-child(3) > textarea:nth-child(2){
+    width: 80%;
+  }
+}
+
+/* estilos base */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Signika Negative', sans-serif;
+  background-color: #F5F5F5;
+}
+
+
+
+/* header
+****************************/
+.header {
+  width: 100%;
+  background-color: rgb(107, 0, 168);
+  color: #fff;
+  top: 0;
+  position: fixed;
+  box-shadow: 0px 4px 3px rgba(0,0,0,.5);
+}
+
+.header a {
+  text-decoration: none;
+}
+.child-header {
+  max-width: 1400px;
+  padding: 0 5%;
+  margin: 0 auto 0;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* logo
+****************************/
+.link-logo {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+}
+
+
+
+/* menu de navegacion
+****************************/
+.box-menu-navegacion {
+  width: 50%;
+}
+.box-menu-navegacion ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.menu-navegacion {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-menu-link {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  transition: .3s linear;
+  padding: 1.8rem 0;
+  display: inline-block;
+}
+
+/* hover */
+.item-menu-link:hover {
+  color: #d92626;
+}
+.item-menu-sub-menu:hover i {
+  color: #d92626;
+  transition: .3s linear;
+}
+
+
+
+
+/* boton hamburguesa
+****************************/
+.btn-hamburguesa {
+  display: none;
+  background-color: transparent;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+.btn-hamburguesa span {
+  height: 2px;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  width: 25px;
+  border-radius: 20px;
+}
+.btn-hamburguesa span:nth-child(2) {
+  margin: .4rem 0;
+}
+
+
+
+
+@media screen and (max-width: 980px) {
+  /* boton hamburguesa
+  ****************************/
+  .btn-hamburguesa {
+    display: block;
+  }
+  
+  /*  header
+  ****************************/
+  .header {
+    padding: 1rem 0;
+
+  }
+  
+  /*  menu de navegacion
+  ****************************/
+  .box-menu-navegacion {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    transform: scaley(0);
+    transform-origin: top;
+    transition: .3s linear;
+    padding: 0 2rem;
+  }
+  .menu-navegacion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item-menu-link {
+    padding: 1rem 0;
+    color:#000;
+  }
+
+  .item-menu-link:hover {
+    background: rgb(192, 192, 192);
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  
+  
+  /*  activador sub menu
+  ****************************/
+  .viewMenu {
+    transform: scaley(1);
+  }
+
+  
+  /*  hover
+  ****************************/
+  .item-menu-link:hover,
+  .item-menu-sub-menu:hover i {
+    color: initial;
+  }
+}
+
+/*Mensajes*/
+
+#RegAct{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.errores{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background: silver;
+  color:red;
+}
+
+/*Respuestas*/
+.form > form:nth-child(1) > p:nth-child(1) > select:nth-child(1){
+  width: 70%;
+}
