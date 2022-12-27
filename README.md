@@ -13,4 +13,6 @@ password: prueba
 
 Se puede ver un ejemplo de este proyecto funcionando en la siguiente URL: https://ejemplos.entreunosyceros.net/Bot-ecillo/index.php.
 
+![login-bot-ecillo](https://user-images.githubusercontent.com/6242827/209705360-88898aa6-2e50-4dc2-a91a-3bcda1a5c18d.png)
+
 La parte administrativa se puede visitar desde la URL: https://ejemplos.entreunosyceros.net/Bot-ecillo/login.php
